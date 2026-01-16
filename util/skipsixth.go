@@ -1,17 +1,25 @@
 package util
 
+import "fmt"
+
 func SkipSixth(str string) string {
 	content := collectAll(str)
 	runeStr := []rune(content)
+	results := []rune{}
 
 	if len(runeStr) < 5 {
 		return "Invalid Input"
 	}
 
-	for i := 5; i < len(runeStr); i += 6 {
-		runeStr[i] = ' '
+	for i, char := range runeStr {
+		if (i+1)%6 == 0 && i < len(runeStr)-1 {
+			results = append(results, ' ')
+			continue
+		}
+		results = append(results, char)
+		fmt.Println(len(results), len(content))
 	}
-	return string(runeStr)
+	return string(results)
 }
 
 func collectAll(str string) string {

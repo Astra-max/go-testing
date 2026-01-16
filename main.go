@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(util.SkipSixth("This is a wonderful day"))
+	fmt.Println(util.SkipSixth("This is the write code",))
 }

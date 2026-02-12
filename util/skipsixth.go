@@ -1,7 +1,5 @@
 package util
 
-import "fmt"
-
 func SkipSixth(str string) string {
 	content := collectAll(str)
 	runeStr := []rune(content)
@@ -17,7 +15,6 @@ func SkipSixth(str string) string {
 			continue
 		}
 		results = append(results, char)
-		fmt.Println(len(results), len(content))
 	}
 	return string(results)
 }

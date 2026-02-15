@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"handlers"
+	"github.com/Astra-max/go-testing/handlers"
 )
 
 func TestHelloHandler(t *testing.T) {
